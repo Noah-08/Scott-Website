@@ -14,19 +14,42 @@ body{
     font-family:Arial, Helvetica, sans-serif;
 }
 
-/* Back button */
-.back{
+/* Navigation buttons (shared style) */
+.nav-btn{
     position:fixed;
     top:20px;
-    left:20px;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:18px;
-    color:#a1005a;
     z-index:10;
-    background:rgba(255,255,255,0.7);
-    padding:6px 10px;
-    border-radius:6px;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:600;
+    color:#111;
+    padding:10px 14px;
+    border-radius:12px;
+
+    /* Glass effect */
+    background:rgba(255,255,255,0.6);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    /* Subtle shadow */
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+
+    transition:all 0.2s ease;
+}
+
+/* Positioning */
+.back{
+    left:20px;
+}
+
+.next{
+    right:20px;
+}
+
+/* Hover / tap feedback */
+.nav-btn:active{
+    transform:scale(0.95);
+    background:rgba(255,255,255,0.8);
 }
 
 /* Container */
@@ -36,7 +59,7 @@ body{
     padding:0;
 }
 
-/* Image fits width, keeps full height */
+/* Image */
 .main-image{
     width:100%;
     height:auto;
@@ -49,13 +72,11 @@ body{
 
 <body>
 
-<a class="back" href="index.html">← Home</a>
-<a class="next" href="profile-2.html">Next →</a>
+<a class="nav-btn back" href="index.html">← Home</a>
+<a class="nav-btn next" href="profile-2.html">Next →</a>
 
 <div class="container">
-
-<img class="main-image" src="Images/PROFILE 1.PNG" alt="Profile 1">
-
+    <img class="main-image" src="Images/PROFILE 1.PNG" alt="Profile 1">
 </div>
 
 </body>
