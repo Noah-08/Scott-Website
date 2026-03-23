@@ -14,10 +14,11 @@ body{
     font-family:Arial, Helvetica, sans-serif;
 }
 
-/* Navigation buttons (shared style) */
-.nav-btn{
+/* Back button */
+.back{
     position:fixed;
     top:20px;
+    left:20px;
     z-index:10;
     text-decoration:none;
     font-size:16px;
@@ -26,28 +27,16 @@ body{
     padding:10px 14px;
     border-radius:12px;
 
-    /* Glass effect */
     background:rgba(255,255,255,0.6);
     backdrop-filter:blur(10px);
     -webkit-backdrop-filter:blur(10px);
 
-    /* Subtle shadow */
     box-shadow:0 4px 12px rgba(0,0,0,0.1);
 
     transition:all 0.2s ease;
 }
 
-/* Positioning */
-.back{
-    left:20px;
-}
-
-.next{
-    right:20px;
-}
-
-/* Hover / tap feedback */
-.nav-btn:active{
+.back:active{
     transform:scale(0.95);
     background:rgba(255,255,255,0.8);
 }
@@ -59,11 +48,19 @@ body{
     padding:0;
 }
 
-/* Image */
+/* Image (desktop normal) */
 .main-image{
     width:100%;
     height:auto;
     display:block;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px){
+    .main-image{
+        width:140%;          /* stronger zoom */
+        margin-left:-20%;    /* keep centered */
+    }
 }
 
 </style>

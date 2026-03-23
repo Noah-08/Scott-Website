@@ -19,14 +19,26 @@ body{
     position:fixed;
     top:20px;
     left:20px;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:18px;
-    color:#a1005a;
     z-index:10;
-    background:rgba(255,255,255,0.7);
-    padding:6px 10px;
-    border-radius:6px;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:600;
+    color:#111;
+    padding:10px 14px;
+    border-radius:12px;
+
+    background:rgba(255,255,255,0.6);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+
+    transition:all 0.2s ease;
+}
+
+.back:active{
+    transform:scale(0.95);
+    background:rgba(255,255,255,0.8);
 }
 
 /* Container */
@@ -36,11 +48,19 @@ body{
     padding:0;
 }
 
-/* Image fits width, keeps full height */
+/* Image (desktop normal) */
 .main-image{
     width:100%;
     height:auto;
     display:block;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px){
+    .main-image{
+        width:140%;          /* stronger zoom */
+        margin-left:-20%;    /* keep centered */
+    }
 }
 
 </style>
