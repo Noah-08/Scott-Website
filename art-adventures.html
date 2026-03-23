@@ -14,7 +14,7 @@ body{
     font-family:Arial, Helvetica, sans-serif;
 }
 
-/* Back button (modern glass style) */
+/* Back button */
 .back{
     position:fixed;
     top:20px;
@@ -46,21 +46,20 @@ body{
     width:100%;
     margin:0;
     padding:0;
-    overflow:hidden;
 }
 
-/* Image base (desktop) */
+/* Image (desktop normal) */
 .main-image{
     width:100%;
     height:auto;
     display:block;
 }
 
-/* Mobile enhancement (adds slight zoom for scrolling) */
+/* MOBILE FIX */
 @media (max-width: 768px){
     .main-image{
-        width:115%;
-        margin-left:-7.5%;
+        width:140%;          /* stronger zoom */
+        margin-left:-20%;    /* keep centered */
     }
 }
 
