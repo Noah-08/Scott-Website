@@ -14,31 +14,46 @@ body{
     font-family:Arial, Helvetica, sans-serif;
 }
 
-/* Back button */
-.back{
+/* Shared nav button style */
+.nav-btn{
     position:fixed;
     top:20px;
-    left:20px;
     z-index:10;
     text-decoration:none;
-    font-size:16px;
+    font-size:15px;
     font-weight:600;
     color:#111;
-    padding:10px 14px;
-    border-radius:12px;
+    padding:10px 16px;
+    border-radius:14px;
 
-    background:rgba(255,255,255,0.6);
-    backdrop-filter:blur(10px);
-    -webkit-backdrop-filter:blur(10px);
+    /* Glass UI */
+    background:rgba(255,255,255,0.65);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
 
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    /* Depth */
+    box-shadow:0 6px 18px rgba(0,0,0,0.12);
 
+    /* Smooth interaction */
     transition:all 0.2s ease;
 }
 
-.back:active{
-    transform:scale(0.95);
-    background:rgba(255,255,255,0.8);
+/* Positions */
+.back{
+    left:20px;
+}
+
+.next{
+    right:20px;
+}
+
+/* Hover / tap */
+.nav-btn:hover{
+    background:rgba(255,255,255,0.85);
+}
+
+.nav-btn:active{
+    transform:scale(0.94);
 }
 
 /* Container */
@@ -48,18 +63,18 @@ body{
     padding:0;
 }
 
-/* Image (desktop normal) */
+/* Image */
 .main-image{
     width:100%;
     height:auto;
     display:block;
 }
 
-/* MOBILE FIX */
+/* Mobile scroll feel */
 @media (max-width: 768px){
     .main-image{
-        width:140%;          /* stronger zoom */
-        margin-left:-20%;    /* keep centered */
+        width:140%;
+        margin-left:-20%;
     }
 }
 
